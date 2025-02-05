@@ -1,2 +1,10 @@
-<h1>TestArea#index</h1>
-<p>Find me in app/views/test_area/index.html.erb</p>
+<% @places.each do |place_type, places| %>
+<div>
+  <h1><%= place_type.to_s.humanize %></h1>
+  <% places[:results].map do |place| %>
+  <div>
+      <%= place[:name] %>
+    </div>
+  <% end %>
+</div>
+<% end %>

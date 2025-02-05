@@ -13,6 +13,12 @@ Things you may want to cover:
 
 * Database creation
 
+Connecting to Redis in `fly.io`:
+
+```
+fly redis connect
+```
+
 * Database initialization
 
 * How to run the test suite

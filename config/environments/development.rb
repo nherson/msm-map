@@ -25,8 +25,13 @@ Rails.application.configure do
     config.action_controller.perform_caching = false
   end
 
-  # Change to :null_store to avoid any caching.
-  config.cache_store = :memory_store
+  # Set `USE_REDIS` to `true` to use Redis for caching in local development. If you want to use
+  # the live Redis cache in Upstash, run `fly redis proxy` and have the proper REDIS_URL environment
+  # variable in .env
+  config.cache_store = :redis_cache_store, {
+    url: ENV.fetch('REDIS_URL', 'redis://localhost:6379/0'),
+    namespace: 'msm-map'
+  }
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :local
