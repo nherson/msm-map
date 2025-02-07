@@ -20,7 +20,7 @@ end
 class TestAreaController < ApplicationController
   PLACE_TYPES = [
     "art_gallery",
-    "atm",
+    # "atm", SILLY
     # "bakery", NONE
     "bar",
     "beauty_salon",
@@ -50,6 +50,10 @@ class TestAreaController < ApplicationController
     @places = PLACE_TYPES.each_with_object({}) do |type, result|
       result[type.to_sym] = fetch_places_by_type(type)
     end
+  end
+
+  def show
+    @places = fetch_places_by_type(params[:type])
   end
 
   private
