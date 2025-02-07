@@ -1,10 +1,13 @@
-<% @places.each do |place_type, places| %>
 <div>
-  <h1><%= place_type.to_s.humanize %></h1>
-  <% places[:results].map do |place| %>
-  <div>
-      <%= place[:name] %>
+  <div id="map" style="height: 300px"></div>
+  <% @places.each do |place_type, places| %>
+    <div>
+      <h1><%= place_type.to_s.humanize %></h1>
+      <% places[:results].map do |place| %>
+        <div>
+          <%= place[:name] %>
+        </div>
+      <% end %>
     </div>
   <% end %>
 </div>
-<% end %>

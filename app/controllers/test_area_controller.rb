@@ -1,5 +1,5 @@
-require 'google_maps_service'
-require 'singleton'
+require "google_maps_service"
+require "singleton"
 
 class GooglePlacesClient
   include Singleton
@@ -8,7 +8,7 @@ class GooglePlacesClient
 
   def initialize
     @client = GoogleMapsService::Client.new(
-      key: ENV['GOOGLE_API_KEY'],
+      key: ENV["GOOGLE_API_KEY"],
     )
   end
 
@@ -18,7 +18,6 @@ class GooglePlacesClient
 end
 
 class TestAreaController < ApplicationController
-
   PLACE_TYPES = [
     "art_gallery",
     "atm",
@@ -45,7 +44,7 @@ class TestAreaController < ApplicationController
     # "pet_store", NONE
     "restaurant",
     "shoe_store",
-    "tourist_attraction",
+    "tourist_attraction"
   ]
   def index
     @places = PLACE_TYPES.each_with_object({}) do |type, result|
@@ -54,20 +53,38 @@ class TestAreaController < ApplicationController
   end
 
   private
-  def fetch_places_by_type(type)
-    Rails.logger.info("Checking cache for type: #{type}")
-    Rails.cache.fetch(cache_key(type), expires_in: 1.week) do
-      Rails.logger.info("Fetching places for type after cache miss: #{type}")
-      GooglePlacesClient.instance.places_nearby(
-        location: {
-          lat: 34.2816827,
-          lng: -119.2950365
-        },
-        radius: 500,
-        type: type
-      )
+    def fetch_places_by_type(type)
+      Rails.logger.info("Checking cache for type: #{type}")
+      Rails.cache.fetch(cache_key(type), expires_in: 1.week) do
+        results = []
+        page_token = nil
+
+        Rails.logger.info("Fetching places for type after cache miss: #{type}")
+        loop do
+          begin
+            response = GooglePlacesClient.instance.places_nearby(
+              location: {
+                lat: 34.2808835,
+                lng: -119.2937986
+              },
+              radius: 500,
+              type: type,
+              page_token: page_token
+            )
+            results += response[:results]
+            page_token = response[:next_page_token]
+            break if page_token.blank?
+          rescue GoogleMapsService::Error::InvalidRequestError
+            # This exception is thrown when Google's dumb fucking API
+            # hasn't gotten its next page ready for us yet.
+            # Docs: https://developers.google.com/maps/documentation/places/web-service/search-nearby#PlaceSearchPaging
+            Rails.logger.info("Next page not ready for #{type}, sleeping for 2 seconds")
+            sleep 2
+          end
+        end
+        { results: results.sort_by { |r| r[:name] } }
+      end
     end
-  end
 
   def cache_key(type)
     "google_api:places_nearby:type:#{type}"

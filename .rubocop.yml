@@ -4,10 +4,6 @@ inherit_gem: { rubocop-rails-omakase: rubocop.yml }
 AllCops:
   AutoCorrect: true
 
-Layout/IndentationConsistency:
-  Enabled: true
-  EnforcedStyle: spaces
-
 Layout/IndentationWidth:
   Enabled: true
   Width: 2
