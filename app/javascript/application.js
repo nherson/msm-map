@@ -11,9 +11,4 @@ document.addEventListener("DOMContentLoaded", function() {
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
-
-  // Example: Adding a marker
-  L.marker([34.280693, -119.2947692]).addTo(map)
-    .bindPopup('Content!')
-    .openPopup();
 });

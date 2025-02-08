@@ -20,7 +20,7 @@ module Clients
       Rails.logger.info("Fetching places for type after cache miss: #{type}")
       loop do
         begin
-          response = GooglePlacesClient.instance.places_nearby(
+          response = places_nearby(
             location: {
               lat: 34.2808835,
               lng: -119.2937986

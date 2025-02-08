@@ -5,7 +5,9 @@ gem "google_maps_service_ruby"
 gem "httparty"
 gem "rubocop", require: false
 gem "dotenv-rails"
-gem 'redis-client'
+gem "redis-client"
+gem "tailwindcss-rails"
+gem "browser"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 8.0.1"
@@ -69,6 +71,6 @@ group :test do
   gem "selenium-webdriver"
 end
 
-gem "dockerfile-rails", ">= 1.7", :group => :development
+gem "dockerfile-rails", ">= 1.7", group: :development
 
 gem "redis", "~> 5.3"

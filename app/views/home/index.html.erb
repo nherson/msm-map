@@ -1,11 +1,14 @@
 <div>
-  <div id="map" style="height: 300px; width: 700px"></div>
+  <div class="bg-blue-500 text-white p-4">
+    Main Street Moves Directory (WIP)
+  </div>
+  <div id="map" style="height: 300px"></div>
   <% @places.each do |place_type, places| %>
     <div>
       <h1><%= place_type.to_s.humanize %></h1>
       <% places[:results].map do |place| %>
-        <div>
-          <%= place[:name] %>
+        <div class="mx-4 my-2 text-gray-600">
+          <%= link_to place[:name], map_link(place) %>
         </div>
       <% end %>
     </div>
