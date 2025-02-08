@@ -9,8 +9,8 @@
   * Rules to rename businesses with odd formatting, etc.
   * Trim unused fields
 * Cron job to keep Redis up to date
-* Cron job to keep the app alive
+* ~~Cron job to keep the app alive~~
 * Setup workflow to access the site locally from mobile (ngrok?)
-* Fix geo links
+* ~~Fix geo links~~
 * ~~DNS for map.venturapop.org~~
 * ~~TailwindCSS install~~

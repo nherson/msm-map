@@ -39,3 +39,9 @@ None... yet :)
 ## Deploying
 
 `fly deploy`
+
+# Infrastructure
+
+* Cron job at `cron-job.org` to hit `/up` on a 10 minute timer; this keeps the app running in `fly.io` and also sends an email when the site breaks
+* Redis to make load times faster but more importantly to shield from too many requests to the Google Places API
+* Fly.io for application hosting
