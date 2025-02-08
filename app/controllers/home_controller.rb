@@ -1,7 +1,4 @@
-require "google_maps_service"
-require "singleton"
-
-class TestAreaController < ApplicationController
+class HomeController < ApplicationController
   PLACE_TYPES = [
     "art_gallery",
     # "atm", SILLY
@@ -30,19 +27,22 @@ class TestAreaController < ApplicationController
     "shoe_store",
     "tourist_attraction"
   ]
+
   def index
     @places = PLACE_TYPES.each_with_object({}) do |type, result|
-      result[type.to_sym] = Clients::GooglePlaces.instance.get_places_by_type(type)
+      result[type.to_sym] = fetch_places_by_type(type)
     end
   end
 
-  def show
-    @place = Clients::GooglePlaces.instance.get_places_by_type(params[:type])
-    Rails.logger.info(@place)
-  end
+  private
+    def fetch_places_by_type(type)
+      Rails.logger.info("Checking cache for type: #{type}")
+      Rails.cache.fetch(cache_key(type), expires_in: 1.week) do
+        Clients::GooglePlaces.instance.get_places_by_type(type)
+      end
+    end
 
-
-  def cache_key(type)
-    "google_api:places_nearby:type:#{type}"
-  end
+    def cache_key(type)
+      "google_api:places_nearby:type:#{type}"
+    end
 end

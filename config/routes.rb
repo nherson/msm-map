@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root "home#index"
+  get "home/index"
   get "test_area/index"
   get "test_area/:type", to: "test_area#show"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
