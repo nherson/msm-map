@@ -32,6 +32,10 @@ You need one, set it in `.env` as `GOOGLE_API_KEY`
 
 `./bin/dev`
 
+## Connecting from mobile
+
+Use [`ngrok`](https://ngrok.com/)
+
 ## Database
 
 None... yet :)
