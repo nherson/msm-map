@@ -14,3 +14,4 @@
   * Inject businesses that don't show up for whatever reason
   * Rules to rename businesses with odd formatting, etc.
   * Trim unused fields
+* Tests
