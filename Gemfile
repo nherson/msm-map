@@ -8,6 +8,7 @@ gem "dotenv-rails"
 gem "redis-client"
 gem "tailwindcss-rails"
 gem "browser"
+gem "concurrent-ruby"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 8.0.1"

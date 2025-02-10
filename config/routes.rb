@@ -7,6 +7,6 @@ Rails.application.routes.draw do
   get "test_area/:type", to: "test_area#show"
 
   # Admin routes
-  get "cache/refresh"
+  post "cache/refresh"
   get "up" => "rails/health#show", as: :rails_health_check
 end

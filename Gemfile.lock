@@ -402,6 +402,7 @@ DEPENDENCIES
   brakeman
   browser
   capybara
+  concurrent-ruby
   debug
   dockerfile-rails (>= 1.7)
   dotenv-rails

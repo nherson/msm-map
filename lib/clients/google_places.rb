@@ -36,8 +36,8 @@ module Clients
           # This exception is thrown when Google's dumb fucking API
           # hasn't gotten its next page ready for us yet.
           # Docs: https://developers.google.com/maps/documentation/places/web-service/search-nearby#PlaceSearchPaging
-          Rails.logger.info("Next page not ready for #{type}, sleeping for 2 seconds")
-          sleep 2
+          Rails.logger.info("Next page not ready for #{type}, sleeping for 1 seconds")
+          sleep 1
         end
       end
       Rails.logger.info("Found #{results.length} places for #{type}")
