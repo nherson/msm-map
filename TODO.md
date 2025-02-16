@@ -10,9 +10,10 @@
 * ~~Cron job to keep Redis up to date~~
 * Phone viewbox
 * Some sort of filter/exclusion/override/injection system for google data
-  * Filter bullshit businesses
+  * ~~Filter bullshit businesses~~
   * Inject businesses that don't show up for whatever reason
-  * Rules to rename businesses with odd formatting, etc.
-  * Trim unused fields (class for `Business`)
+  * ~~Rules to rename businesses with odd formatting, etc.~~
+  * ~~Trim unused fields (class for `Business`)~~
 * Tests
+* Change cache to hold mashalled `Business` sets after post-processing 
 * Refactor `Places::Business` to `Map::Place`
