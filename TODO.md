@@ -13,5 +13,6 @@
   * Filter bullshit businesses
   * Inject businesses that don't show up for whatever reason
   * Rules to rename businesses with odd formatting, etc.
-  * Trim unused fields
+  * Trim unused fields (class for `Business`)
 * Tests
+* Refactor `Places::Business` to `Map::Place`

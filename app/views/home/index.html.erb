@@ -3,12 +3,12 @@
     Main Street Moves Directory (WIP)
   </div>
   <div id="map" style="height: 300px"></div>
-  <% @places.each do |place_type, places| %>
+  <% @businesses_by_type.each do |type, businesses| %>
     <div>
-      <h1><%= place_type.to_s.humanize %></h1>
-      <% places[:results].map do |place| %>
+      <h1><%= type.to_s.humanize %></h1>
+      <% businesses.map do |business| %>
         <div class="mx-4 my-2 text-gray-600">
-          <%= link_to place[:name], map_link(place) %>
+          <%= link_to business.name, map_link(business) %>
         </div>
       <% end %>
     </div>

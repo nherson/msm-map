@@ -8,8 +8,16 @@ class TestAreaController < ApplicationController
   end
 
   def show
-    # @place = Clients::GooglePlaces.instance.get_places_by_type(params[:type])
-    # Rails.logger.info(@place)
-    render json: { disabled: true }
+    business_data = Rails.cache.fetch(cache_key(params[:type]), expires_in: 1.week) do |key|
+      Clients::GooglePlaces.instance.get_places_by_type(type)
+    end
+    @businesses = business_data[:results].map { |place| Places::Business.new(place) }
+    @businesses = Places::Business.sanitize_list!(@businesses)
   end
+
+  private
+
+    def cache_key(type)
+      "google_api:places_nearby:type:#{type}"
+    end
 end

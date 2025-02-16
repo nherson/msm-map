@@ -8,7 +8,7 @@ module Places
       "beauty_salon",
       "book_store",
       "cafe",
-      "city_hall",
+      # "city_hall", SILLY
       "clothing_store",
       "florist",
       "furniture_store",

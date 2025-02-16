@@ -1,3 +1,5 @@
 <pre>
-  <%= JSON.pretty_generate(@place) %>  
+  <% @businesses.each do |business| %>
+    <%= business.name%> (<%= business.coordinates.latitude %>, <%= business.coordinates.longitude %>, <%= business.google_place_id %>)
+  <% end %>
 </pre>
