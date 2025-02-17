@@ -1,0 +1,63 @@
+# This file contains configuration overrides for places returned by the Google Places API.
+# These allow for modifying name, tags, etc. and can be expanded as needed by adding modifiers
+# in the Map::Pipeline::* module
+tags:
+  - art
+  - beer
+  - cocktails
+  - lunch
+  - dinner
+  - nightlife
+  - thrifting_and_anitiques
+  - coffee
+  - gifts_and_decor
+  - home_goods
+
+# Hash on google place ID for fastest lookup
+places:
+  ChIJKenXYKhS6IARFUFcI0rGlUs:
+    name: "Latitudes Gallery"
+    tags:
+      - art
+      - something else
+
+  ChIJ9_46V9ut6YARUys_TjOSN0o:
+    name: "Finney's Crafthouse"
+
+  ChIJZeCnPcqt6YARjVsfRjNQoKY:
+    name: "House of Culture Ventura"
+
+  ChIJFbA0s--s6YARH77sud21AA4:
+    name: "Rip Curl"
+
+  ChIJ2e03iDGt6YARQoAxvrb73hI:
+    name: "Eclecteak"
+
+  ChIJxdlFfbut6YARDluOou9TMcs:
+    name: "Channel Islands Juice Co."
+
+  ChIJD_Glnfqs6YAR8m4DP3zz744:
+    name: "Maison De Michelle"
+
+  ChIJZw0Zpvqs6YARz4qVaynBwGs:
+    name: "Betty Belts"
+
+  ChIJJ25_pPGs6YARVxIpppRldzU:
+    name: "Brooklyn Charm"
+
+  ChIJsT-X4Wet6YARJ7GV-DmFNA4:
+    name: "Amanzi Hotel"
+
+  ChIJVZFrWO6s6YARr9JVYuVgUWY:
+    name: "Crowne Plaza Ventura Beach"
+
+  ChIJkwkaDO6s6YARRHH-6dR5kIU:
+    name: "Motel 6"
+
+bogus:
+  ChIJq6rqUOWs6YARHcq4Vo4TTCU: true
+  ChIJwXt0aDqt6YARawGwIgWT1lM: true
+  ChIJI2GXQqyt6YARooHQeM4M9p0: true
+  ChIJ_ztNZF6t6YARhei8iyUPO2M: true
+  ChIJUWWFofGs6YARtB1qOA_cxjo: true
+  ChIJba3geQCt6YARh7ieRFrvNvo: true
