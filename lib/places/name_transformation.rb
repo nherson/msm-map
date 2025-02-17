@@ -38,7 +38,6 @@ module Places
 
       def apply!(businesses)
         businesses.each do |business|
-          Rails.logger.info("EVAL: #{business.google_place_id} is #{@@transforms[business.google_place_id.to_sym] || "nil"} in lookup")
           business.name = @@transforms[business.google_place_id.to_sym] if @@transforms.include?(business.google_place_id.to_sym)
         end
       end

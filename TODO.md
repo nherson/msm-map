@@ -17,3 +17,16 @@
 * Tests
 * Change cache to hold mashalled `Business` sets after post-processing 
 * Refactor `Places::Business` to `Map::Place`
+* Tagging system to support custom categorization
+  * Categories
+    * Beer
+    * Cocktails
+    * Lunch
+    * Dinner
+    * Nightlife
+    * Thrifting and Anitiques
+    * Art
+    * Coffee
+    * Gifts and Decor
+    * Home Goods
+  * Google's assigned categories are pretty... not great. Curation may be a must.
