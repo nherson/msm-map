@@ -1,4 +1,4 @@
-module Places
+module Map
   class Types
     ALL = [
       "art_gallery",

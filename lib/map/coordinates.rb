@@ -1,6 +1,6 @@
 # typed: true
 
-module Places
+module Map
   class Coordinates
     attr_reader :latitude, :longitude
 

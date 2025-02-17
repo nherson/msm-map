@@ -8,7 +8,7 @@ class CacheController < ApplicationController
 
     # Use a thread pool to fetch data faster (heavily IO bound operations)
     pool = Concurrent::FixedThreadPool.new(12)
-    futures = Places::Types::ALL.map do |type|
+    futures = Map::Types::ALL.map do |type|
       Concurrent::Future.execute(executor: pool) do
         { type: type, result: Clients::GooglePlaces.instance.get_places_by_type(type) }
       end

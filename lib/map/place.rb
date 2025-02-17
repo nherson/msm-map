@@ -1,11 +1,11 @@
 # typed: true
 
-module Places
-  class Business
+module Map
+  class Place
     class << self
-      def sanitize_list!(businesses)
-        BogusFilter.apply!(businesses)
-        NameTransformation.apply!(businesses)
+      def sanitize_list!(places)
+        BogusFilter.apply!(places)
+        NameTransformation.apply!(places)
       end
     end
 

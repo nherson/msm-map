@@ -1,11 +1,11 @@
 # typed: true
 
-module Places
+module Map
   class BogusFilter
-    # Filter bogus businesses
+    # Filter bogus places
 
     class << self
-      # Add Google Place IDs to this list for businesses that are
+      # Add Google Place IDs to this list for places that are
       # garbage/fake/closed/etc.
       @@bogus_ids = Set.new([
         # Home Goods Store
@@ -20,8 +20,8 @@ module Places
         "ChIJba3geQCt6YARh7ieRFrvNvo" # Ventura main street
       ])
 
-      def apply!(businesses)
-        businesses.filter! { |b| !@@bogus_ids.include?(b.google_place_id) }
+      def apply!(places)
+        places.filter! { |b| !@@bogus_ids.include?(b.google_place_id) }
       end
     end
   end

@@ -11,8 +11,8 @@ class TestAreaController < ApplicationController
     business_data = Rails.cache.fetch(cache_key(params[:type]), expires_in: 1.week) do |key|
       Clients::GooglePlaces.instance.get_places_by_type(type)
     end
-    @businesses = business_data[:results].map { |place| Places::Business.new(place) }
-    @businesses = Places::Business.sanitize_list!(@businesses)
+    @places = business_data[:results].map { |place| Map::Place.new(place) }
+    @places = Map::Place.sanitize_list!(@places)
   end
 
   private

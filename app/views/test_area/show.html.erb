@@ -1,5 +1,5 @@
 <pre>
-  <% @businesses.each do |business| %>
-    <%= business.name%> (<%= business.coordinates.latitude %>, <%= business.coordinates.longitude %>, <%= business.google_place_id %>)
+  <% @places.each do |place| %>
+    <%= place.name%> (<%= place.coordinates.latitude %>, <%= place.coordinates.longitude %>, <%= place.google_place_id %>)
   <% end %>
 </pre>

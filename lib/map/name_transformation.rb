@@ -1,11 +1,11 @@
-module Places
+module Map
   class NameTransformation
     class << self
       @@transforms = {
         # This is a String:String mapping that takes a google_place_id as
-        # a key and maps to a desired name. Use this when a business on Google
+        # a key and maps to a desired name. Use this when a place on Google
         # has some weird name that needs to be modified, e.g. the name itself
-        # contains description of the business, extra info, etc.
+        # contains description of the place, extra info, etc.
 
         # Art Gallery
         "ChIJKenXYKhS6IARFUFcI0rGlUs": "Latitudes Gallery", # Latitudes Gallery - Ventura
@@ -36,9 +36,9 @@ module Places
         "ChIJkwkaDO6s6YARRHH-6dR5kIU": "Motel 6" # Motel 6 Ventura, CA - downtown
       }
 
-      def apply!(businesses)
-        businesses.each do |business|
-          business.name = @@transforms[business.google_place_id.to_sym] if @@transforms.include?(business.google_place_id.to_sym)
+      def apply!(places)
+        places.each do |place|
+          place.name = @@transforms[place.google_place_id.to_sym] if @@transforms.include?(place.google_place_id.to_sym)
         end
       end
     end

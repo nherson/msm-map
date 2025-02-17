@@ -16,7 +16,7 @@
   * ~~Trim unused fields (class for `Business`)~~
 * Tests
 * Change cache to hold mashalled `Business` sets after post-processing 
-* Refactor `Places::Business` to `Map::Place`
+* ~~Refactor `Places::Business` to `Map::Place`~~
 * Tagging system to support custom categorization
   * Categories
     * Beer
@@ -30,3 +30,4 @@
     * Gifts and Decor
     * Home Goods
   * Google's assigned categories are pretty... not great. Curation may be a must.
+* Suggested activities/busisses workflow from home page

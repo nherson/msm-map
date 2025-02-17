@@ -1,12 +1,12 @@
 <div>
   <div id="map" style="height: 300px"></div>
   <div class="px-5">
-    <% @businesses_by_type.each do |type, businesses| %>
+    <% @places_by_type.each do |type, places| %>
       <div>
         <h1><%= type.to_s.humanize %></h1>
-        <% businesses.map do |business| %>
+        <% places.map do |place| %>
           <div class="mx-4 my-2 text-gray-600">
-            <%= link_to business.name, map_link(business) %>
+            <%= link_to place.name, map_link(place) %>
           </div>
         <% end %>
       </div>
