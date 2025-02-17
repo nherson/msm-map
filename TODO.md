@@ -33,6 +33,6 @@
   * Google's assigned categories are pretty... not great. Curation may be a must.
   * Migrate the google "types" into `lib/clients` and use our own defined types
     * These should simply inform the base set of places we fetch and cache, as a pre-filter
-* Suggested activities/busisses workflow from home page
+* Suggested activities/business workflow from home page
 * FAQ and links
 * Revisit pipelining places through filter/transform/etc, maybe a single per-place override system is best
