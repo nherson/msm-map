@@ -1,16 +1,15 @@
 <div>
-  <div class="bg-blue-500 text-white p-4">
-    Main Street Moves Directory (WIP)
-  </div>
   <div id="map" style="height: 300px"></div>
-  <% @businesses_by_type.each do |type, businesses| %>
-    <div>
-      <h1><%= type.to_s.humanize %></h1>
-      <% businesses.map do |business| %>
-        <div class="mx-4 my-2 text-gray-600">
-          <%= link_to business.name, map_link(business) %>
-        </div>
-      <% end %>
-    </div>
-  <% end %>
+  <div class="px-5">
+    <% @businesses_by_type.each do |type, businesses| %>
+      <div>
+        <h1><%= type.to_s.humanize %></h1>
+        <% businesses.map do |business| %>
+          <div class="mx-4 my-2 text-gray-600">
+            <%= link_to business.name, map_link(business) %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
 </div>
