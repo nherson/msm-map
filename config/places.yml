@@ -31,6 +31,26 @@ places:
     name: "Latitudes Gallery"
     tags:
       - art
+  ChIJ6QyTvHOt6YAR0oLhK5Yi4zs:
+    tags:
+      - art
+  ChIJgUw9hPGs6YARxJfqQ3oZl7Q:
+    tags:
+      - art
+
+  ChIJZw0Zpvqs6YARz4qVaynBwGs:
+    name: "Betty Belts"
+    tags:
+      - art
+  ChIJY30Ombmt6YARvdKggb6FdeI:
+    tags:
+      - art
+  ChIJPduuJACt6YARvzVPFPe9C8M:
+    tags:
+      - art
+  ChIJP3eCy9it6YARZD-hs5iSeFk:
+    tags:
+      - art
 
   ChIJ9_46V9ut6YARUys_TjOSN0o:
     name: "Finney's Crafthouse"
@@ -49,9 +69,6 @@ places:
 
   ChIJD_Glnfqs6YAR8m4DP3zz744:
     name: "Maison De Michelle"
-
-  ChIJZw0Zpvqs6YARz4qVaynBwGs:
-    name: "Betty Belts"
 
   ChIJJ25_pPGs6YARVxIpppRldzU:
     name: "Brooklyn Charm"

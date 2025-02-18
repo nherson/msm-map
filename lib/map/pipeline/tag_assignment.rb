@@ -7,7 +7,7 @@ module Map
             place_config = Map::Place.config(place)
             next unless place_config
 
-            place.tags << place_config["tags"]
+            place.tags.concat(place_config["tags"]) if place_config["tags"]
           end
         end
       end

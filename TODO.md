@@ -40,3 +40,14 @@
   * Graceful fallback when the user has location settings disabled (dont render walking path or distance)
   * Some sort of pop up encouraging location services for best experience
 * Fix map so that it doesn't re-render when navigating between pages
+
+short term TODO
+* ~~annotations/config for all the art galleries~~
+* ~~add controller logic to get the art galleries~~
+* render JSON into HTML
+* load JSON into map function
+* render markers onto the map
+* more stuff
+  * distances to locations
+  * sort locations by distance
+  * display cards for locations
