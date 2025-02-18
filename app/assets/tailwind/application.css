@@ -4,5 +4,13 @@
 @tailwind utilities;
 
 h1 {
-  @apply text-4xl font-bold my-4;
+  @apply text-2xl font-bold;
+}
+
+h2 {
+  @apply text-lg my-3;
+}
+
+#subtitle {
+  @apply text-xl mx-2 text-gray-700
 }

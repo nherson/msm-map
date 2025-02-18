@@ -2,16 +2,28 @@
 # These allow for modifying name, tags, etc. and can be expanded as needed by adding modifiers
 # in the Map::Pipeline::* module
 tags:
-  - art
-  - beer
-  - cocktails
-  - lunch
-  - dinner
-  - nightlife
-  - thrifting_and_anitiques
-  - coffee
-  - gifts_and_decor
-  - home_goods
+  art:
+    prompt: Visit art galleries
+  beer:
+    prompt: Grab a local beer
+  cocktails:
+    prompt: Enjoy a craft cocktail
+  lunch:
+    prompt: Find a lunch spot
+  dinner:
+    prompt: Sit down for a nice dinner
+  nightlife:
+    prompt: Take in the nightlife
+  thrifting_and_anitiques:
+    prompt: Thrift or browse antiques
+  coffee:
+    prompt: Sip some coffee/tea
+  gifts_and_decor:
+    prompt: Walk and shop, gifts and decor
+  home_goods:
+    prompt: Walk and shop, home goods
+  tourism:
+    prompt: See the local attractions
 
 # Hash on google place ID for fastest lookup
 places:
@@ -19,7 +31,6 @@ places:
     name: "Latitudes Gallery"
     tags:
       - art
-      - something else
 
   ChIJ9_46V9ut6YARUys_TjOSN0o:
     name: "Finney's Crafthouse"

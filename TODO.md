@@ -36,3 +36,7 @@
 * Suggested activities/business workflow from home page
 * FAQ and links
 * Revisit pipelining places through filter/transform/etc, maybe a single per-place override system is best
+* Basic pathing to chosen destination using embedded map (walking distance and overview)
+  * Graceful fallback when the user has location settings disabled (dont render walking path or distance)
+  * Some sort of pop up encouraging location services for best experience
+* Fix map so that it doesn't re-render when navigating between pages

@@ -77,4 +77,8 @@ Rails.application.configure do
 
   # Allow ngrok connections, to be able to more easily test on mobile
   config.hosts << /.*\.ngrok-free\.app/
+
+  # This will cause local development to place the user somewhere relevant on the map,
+  # like inside the MSM closure area.
+  config.force_mock_location = true
 end

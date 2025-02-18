@@ -1,0 +1,13 @@
+<div>
+  <div class="my-4">
+    <h1>Welcome to Downtown Ventura!</h1>
+    <p class="text-lg not-bold italic mx-2 text-gray-400">Let's find something to do!</h1>
+  </div>
+  <div class="px-5">
+    <% @options.each do |key, option| %>
+      <div class="cursor-pointer bg-white p-4 rounded-lg shadow-md mb-2">
+        <h2><%= option["prompt"] %> <span>→</span></h2>
+      </div>
+    <% end %>
+  </div> 
+</div>

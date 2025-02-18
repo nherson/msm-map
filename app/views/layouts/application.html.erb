@@ -20,13 +20,19 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"/></script>
+    <script>
+      window.isLocalDevelopment = <%= Rails.application.config.force_mock_location || false %>;
+    </script>
   </head>
   <body>
     <main class="container mx-auto">
       <div class="bg-blue-500 text-white p-4">
         Main Street Moves Directory (WIP)
       </div>
-      <%= yield %>
+      <div id="map" style="height: 200px"></div>
+      <div class="px-3">
+        <%= yield %>
+      </div>
     </main>
   </body>
 </html>

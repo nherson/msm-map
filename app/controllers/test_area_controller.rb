@@ -15,6 +15,10 @@ class TestAreaController < ApplicationController
     @places = Map::Place.sanitize_list!(@places)
   end
 
+  def experience
+    @options = PLACES_CONFIG["tags"]
+  end
+
   private
 
     def cache_key(type)
