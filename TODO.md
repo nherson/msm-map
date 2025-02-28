@@ -36,18 +36,9 @@
 * Suggested activities/business workflow from home page
 * FAQ and links
 * Revisit pipelining places through filter/transform/etc, maybe a single per-place override system is best
-* Basic pathing to chosen destination using embedded map (walking distance and overview)
-  * Graceful fallback when the user has location settings disabled (dont render walking path or distance)
-  * Some sort of pop up encouraging location services for best experience
+* Flash/alert message when the user doesnt have location enabled
 * Fix map so that it doesn't re-render when navigating between pages
-
-short term TODO
-* ~~annotations/config for all the art galleries~~
-* ~~add controller logic to get the art galleries~~
-* render JSON into HTML
-* load JSON into map function
-* render markers onto the map
-* more stuff
-  * distances to locations
-  * sort locations by distance
-  * display cards for locations
+* Cards for places in the experience flow
+  * Google Map link
+  * Distance rendered nicely
+  * Sorted by distance

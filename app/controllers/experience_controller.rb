@@ -8,7 +8,7 @@ class ExperienceController < ApplicationController
     tag = params[:tag]
     cache_keys = Map::Types::ALL.map { |type| cache_key(type) }
     places_by_type = Rails.cache.fetch_multi(*cache_keys, expires_in: 1.week) do |key|
-      type = cache_key_to_type(key)
+      type = cache_key(key)
       Rails.logger.info("Cache miss for type: #{type}")
       Clients::GooglePlaces.instance.get_places_by_type(type)
     end
@@ -23,7 +23,7 @@ class ExperienceController < ApplicationController
     Map::Place.sanitize_list!(@places)
 
     @places = Map::Place.only_with_tag(@places, tag)
-    Rails.logger.info(@places)
+    Rails.logger.info(@places.to_json)
   end
 
   private
