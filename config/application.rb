@@ -22,6 +22,9 @@ module MsmMap
     # in config/environments, which are processed later.
     #
     # config.time_zone = "Central Time (US & Canada)"
-    # config.eager_load_paths << Rails.root.join("extras")
+
+    # In development, eager load the places config so it can be iterated on without
+    # having to restart the Rails server to pick up changes
+    config.eager_load_paths << Rails.root.join("config/places.yml")
   end
 end

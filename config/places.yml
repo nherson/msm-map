@@ -37,7 +37,6 @@ places:
   ChIJgUw9hPGs6YARxJfqQ3oZl7Q:
     tags:
       - art
-
   ChIJZw0Zpvqs6YARz4qVaynBwGs:
     name: "Betty Belts"
     tags:
@@ -52,8 +51,152 @@ places:
     tags:
       - art
 
+  # Local Beer
+  ChIJiT5md_Ot6YARxTtUIan6S-k:
+    tags:
+      - beer
+  ChIJ-XqwAPCs6YARmjLzA3kl-fw:
+    tags:
+      - beer
+  ChIJc8HNvlCt6YAR4cy3pfeUJ8o:
+    tags:
+      - beer
+  ChIJx7BN3PGs6YARSD9BGhDSpCI:
+    tags:
+      - beer
+  ChIJ3-EBt--s6YAReisNfE8RWO4:
+    tags:
+      - beer
+
+  # Cocktails
+  ChIJizYdvIqt6YAR3gJlajeuB5M:
+    tags:
+      - cocktails
+  ChIJBUhv7xmt6YARO5esD5oWY8w:
+    tags:
+      - cocktails
+  ChIJIXlQcKet6YARkOnNG2dx-hM:
+    tags:
+      - cocktails
+  ChIJA0pSS6yt6YARu3i5b-Ljozo:
+    tags:
+      - cocktails
+  ChIJs0bGJTSt6YARJORtQiypUqI:
+    tags:
+      - cocktails
+  ChIJVQ2ZPgqt6YARtKR0Tw0twL4:
+    tags:
+      - cocktails
+  ChIJTccuuPGs6YARyCwVszk8Xbg:
+    tags:
+      - cocktails
+  ChIJi-tlGPCs6YARpEWm33T7leg:
+    tags:
+      - cocktails
+  ChIJz2sRpvqs6YARyQ9RtfbRX8I:
+    tags:
+      - cocktails
+  ChIJs2BMIXat6YAR5YsTo-SULP0: # Model Citizen
+    tags:
+      - cocktails
+      - dinner
+
+  # Lunch
+  ChIJMXnDjO2s6YARHguek0JbWu0:
+    tags:
+      - lunch
+  ChIJhZTU_V6t6YARgLwmE7xSdkE:
+    tags:
+      - lunch
+  ChIJxbfdIQCt6YARUpHlYti02p8:
+    tags:
+      - lunch
+  ChIJK6BL0--s6YAR0rFjbp6V900:
+    tags:
+      - lunch
+  ChIJ6bDlyfGs6YARsq2s8eIgLVw:
+    tags:
+      - lunch
+  ChIJ8TiRLPCs6YAR2aE68_PzSjU:
+    tags:
+      - lunch
+  ChIJZZ7cKfKs6YARa_1GijuPGZM:
+    tags:
+      - lunch
+  ChIJATG3KPKs6YARUkeayoiOhoA:
+    tags:
+      - lunch
+  ChIJRWnlPfCs6YARY2remtBUIkU:
+    tags:
+      - lunch
+  ChIJPcZ2aQCt6YARS6hEXcH3nAU:
+    tags:
+      - lunch
+  ChIJ2TDRB5Kt6YARL21LofqaK5w:
+    tags:
+      - lunch
+  ChIJY12HOB2t6YAR7_mSmbxuVzw:
+    tags:
+      - lunch
+  ChIJk-LUOPCs6YARXzyySJGdZow:
+    tags:
+      - lunch
+  ChIJdSRHPfCs6YARzFPxMJsnkGE:
+    tags:
+      - lunch
+  ChIJoZ43LPCs6YARy8_0aOEV5us:
+    tags:
+      - lunch
+  ChIJ_5j2NPCs6YARzpa3TE7DXIw: # Google says "Maki Sushi" but the signage says "Masa Sushi" ..?
+    tags:
+      - lunch
+  ChIJbwOoMfKs6YARjQrkAF8BiDo:
+    tags:
+      - lunch
+  ChIJf7HSF7Wt6YAR_SVC0Mbf7_E:
+    tags:
+      - lunch
+  ChIJK0zkEwmt6YAROC3b2qs8atA:
+    tags:
+      - lunch
+  ChIJX9x3CPCs6YARvMWInJ3cl0k:
+    tags:
+      - lunch
+  ChIJIYYtRGGt6YARpA1ok5cyIYQ:
+    tags:
+      - lunch
+  ChIJyWK0kPGs6YAR3B4N9d0QRS0:
+    tags:
+      - lunch
+  ChIJzy2d1fOs6YARUsTgy5LX1IM:
+    tags:
+      - lunch
+  ChIJKwBNgsOt6YAREC8f_DDOBIU:
+    tags:
+      - lunch
+  ChIJG7xHj2mt6YAR1mHqqJ8xHS0:
+    tags:
+      - lunch
+  ChIJlQNhc-ut6YARZzdyLLtJ920:
+    tags:
+      - lunch
+  ChIJSZgCie2s6YAR7po6Nrn-2u4:
+    tags:
+      - lunch
+
+  # Dinner
+  ChIJw_LUovGs6YAR7-MtCb-yupY: # Rice by Mama
+    tags:
+      - lunch
+      - dinner
+
+  # Name Overrides
   ChIJ9_46V9ut6YARUys_TjOSN0o:
     name: "Finney's Crafthouse"
+    tags:
+      - beer
+      - lunch
+      - dinner
 
   ChIJZeCnPcqt6YARjVsfRjNQoKY:
     name: "House of Culture Ventura"
@@ -89,3 +232,10 @@ bogus:
   ChIJ_ztNZF6t6YARhei8iyUPO2M: true
   ChIJUWWFofGs6YARtB1qOA_cxjo: true
   ChIJba3geQCt6YARh7ieRFrvNvo: true
+  ChIJ_5UkXgCt6YARfR21IzLWXA4: true
+  ChIJUROVGKyt6YARvCxcz686r9o: true
+  ChIJTwkHQNqt6YARvpQaStABlSM: true
+  ChIJcW8kNO6s6YARYelZGL35Kfg: true # Hamburger Habit, lets not promote national chains!
+  ChIJCRZx_JKt6YARSeN_bn69zT4: true
+  ChIJscKpnJWt6YARsnc-GUCUbK4: true # Medici Pizza, closing?
+  ChIJKWMnFPCs6YARo-n6GosJKJA: true # Starbucks, boo

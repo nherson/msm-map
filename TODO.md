@@ -48,3 +48,6 @@
 * Clean up header of site
   * Tappable logo
   * "Back" button baked in via StimulusJS
+* "Subtags" on a given tag (e.g. "beer" tag can have "bar" and "brewery" subtags)
+* Include business hours
+* Change lunch to emphasize "quick" and only show ~10 places, fast casual, etc
