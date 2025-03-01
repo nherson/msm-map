@@ -18,11 +18,6 @@ module Map
       end
 
       def only_with_tag(places, tag)
-        places.each do |place|
-          if !place.tags.empty?
-            puts "#{place.name} has tags: #{place.tags}"
-          end
-        end
         places.filter { |place| place.tags.include?(tag) }
       end
     end

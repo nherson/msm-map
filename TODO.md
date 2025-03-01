@@ -38,7 +38,13 @@
 * Revisit pipelining places through filter/transform/etc, maybe a single per-place override system is best
 * Flash/alert message when the user doesnt have location enabled
 * Fix map so that it doesn't re-render when navigating between pages
-* Cards for places in the experience flow
-  * Google Map link
-  * Distance rendered nicely
+* ~~Cards for places in the experience flow~~
+  * ~~Google Map link~~
+  * ~~Distance rendered nicely~~
   * Sorted by distance
+* Clean up experience display UI
+* Blurb for each experience at top of screen
+* "Reset Map" button as part of map display
+* Clean up header of site
+  * Tappable logo
+  * "Back" button baked in via StimulusJS

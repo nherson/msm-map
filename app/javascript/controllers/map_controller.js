@@ -33,9 +33,8 @@ export default class extends Controller {
     map.setView([34.2816827, -119.2950365], 15);
 
     for (var i = 0; i < this.placeTargets.length; i++) {
-      const placeIndex = i + 1;
-      const place = JSON.parse(this.placeTargets[i].dataset.placeDataValue);
-      this.addMarkerToMap(place, placeIndex);
+      const placeData = JSON.parse(this.placeTargets[i].dataset.placeDataValue);
+      this.addMarkerToMap(placeData.place, placeData.index);
     }
   }
 

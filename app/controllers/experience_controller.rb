@@ -23,7 +23,6 @@ class ExperienceController < ApplicationController
     Map::Place.sanitize_list!(@places)
 
     @places = Map::Place.only_with_tag(@places, tag)
-    Rails.logger.info(@places.to_json)
   end
 
   private

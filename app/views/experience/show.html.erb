@@ -1,14 +1,33 @@
 <div><%= link_to "Back", experiences_path %></div>
 <% @places.each_with_index do |place, idx| %>
+  <% index = idx + 1%>
   <div
+    class="bg-white shadow-md rounded-lg p-4 my-3"
     data-controller="place"
-    data-place-data-value="<%= place.to_json %>"
-    data-map-target="place">
-    <div>
-      <div class="flex">
-        <p class="mr-2"><%= place.name %></p>
-        <p data-place-target="distance">Distance will be shown here.</p>
+    data-place-data-value="<%= {place: place, index: index }.to_json %>"
+    data-map-target="place"
+  >
+    <div class="flex items-center justify-between">
+      <!-- Index Number -->
+      <div class="w-10 h-10 flex items-center justify-center bg-blue-500 text-white rounded-full">
+        <%= index %>
       </div>
+      <!-- Place Name and Distance -->
+      <div class="flex-1 mx-4">
+        <h2 class="text-lg font-semibold"><%= place.name %></h2>
+        <p class="text-gray-400" data-place-target="distance"></p>
+      </div>
+      <!-- Google Maps Link -->
+      <a
+            href="<%= map_link(place) %>"
+            target="_blank"
+            class="flex items-center justify-center w-10 h-10 bg-green-500 text-white rounded-full hover:bg-green-600 transition-colors"
+          >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
+      </a>
     </div>
   </div>
 <% end %>
